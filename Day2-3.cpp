@@ -52,14 +52,15 @@ int solve() {
     }
     if(c!=0)
     {
-        cout<<"The number was not found So the closest number is:";
+        cout<<"The number was not found So the closest ";
         if(abs(num-v[mid])>=abs(num-v[hold]))
         {
-            cout<<v[hold]<<nn;
+            cout<<"smaller number is "<<v[hold-1]<<" and larger number is "<<v[hold];
         }
         else
         {
-            cout<<v[mid]<<nn;
+            cout<<"smaller number is "<<v[mid-1]<<" and larger number is "<<v[mid];
+
         }
     }
     return 0;
