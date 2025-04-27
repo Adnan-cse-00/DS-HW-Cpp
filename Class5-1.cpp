@@ -15,7 +15,7 @@ ll t=0;
 
 void push(ll n)
 {
-    if(t==4)
+    if(t>=4)
     {
         cout<<"Value overflow";
     }
@@ -23,12 +23,26 @@ void push(ll n)
     t++;
 }
 
+void pop(ll n)
+{
+    t--;
+    if(t<0)
+    {
+        cout<<"Value Underflow";
+    }
+}
+
 int main() {
     push(12);
     push(14);
     push(14);
     push(14);
-    push(15);
-    push(15);
+    pop(2);
+    pop(2);
+    pop(2);
+    for(ll i=0;i<t;i++)
+    {
+        cout<<ar[i]<<' ';
+    }
     return 0;
 }
